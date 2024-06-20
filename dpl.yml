@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tms
-        image: tusharsaini9045/tms:3
+        image: tusharsaini9045/tms:latest
         ports:
         - containerPort: 80
