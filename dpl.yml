@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tms-deployment
+  labels:
+    app: tms-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tms-deployment
+  template:
+    metadata:
+      labels:
+        app: tms-deployment
+    spec:
+      containers:
+      - name: tms
+        image: tusharsaini9045/tms:3
+        ports:
+        - containerPort: 80
